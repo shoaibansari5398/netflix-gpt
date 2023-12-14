@@ -14,7 +14,6 @@ const useTopRatedMovies = () => {
       API_OPTIONS
     );
 	const json = await data.json();
-	console.log("Upcoming",json)
     dispatch(addUpcomingMovies(json.results));
   };
 
