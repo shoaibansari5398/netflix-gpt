@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser,removeUser } from '../utils/userSlice';
-import { toggleGptSearchView } from '../utils/gptSlice';
+import { addGptMovieResult, toggleGptSearchView } from '../utils/gptSlice';
 import { SUPPORTED_LANGUAGES } from '../utils/constants';
 import { changeLanguage } from '../utils/configSlice';
 
@@ -32,7 +32,6 @@ const Header = () => {
 	}
 
 	const handleLanguageChange = (e) => {
-		console.log(e.target.value);
 		dispatch(changeLanguage(e.target.value))
 	 }
 
